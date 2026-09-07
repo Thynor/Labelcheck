@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # LabelCheck AI — Prototype
 
 **SIH26034** — Software System to Check Compliance of Packaged Commodities
@@ -99,3 +100,7 @@ labelcheck-ai/
   test cases.
 - Add an inspector-facing history log (SQLite/MySQL) of past scans, as
   described in the pitch deck's Technical Approach slide.
+=======
+# Labelcheck
+prototype of SIH 2K26
+>>>>>>> 7058238f4862ba36631bf3f6640cb5df07da1fcc
