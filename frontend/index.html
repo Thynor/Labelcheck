@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LabelCheck AI — Legal Metrology Compliance Scanner</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="brand">
+        <span class="brand-mark">L</span>
+        <span>LabelCheck <span class="brand-ai">AI</span></span>
+      </div>
+      <span class="ps-tag">SIH26034 · Legal Metrology Compliance</span>
+    </div>
+  </header>
+
+  <main class="app-shell">
+    <section class="hero">
+      <h1>Scan a label. Know Rule 6 compliance in seconds.</h1>
+      <p>Photograph a packaged product's label — OCR reads it, and the rule engine checks it against every mandatory declaration in Rule 6 of the Legal Metrology (Packaged Commodities) Rules, 2011.</p>
+    </section>
+
+    <section class="scan-panel">
+      <div class="dropzone" id="dropzone">
+        <div class="preview-wrap" id="preview-wrap" hidden>
+          <img id="preview-img" alt="Selected label" />
+          <div class="scan-line" id="scan-line" hidden></div>
+        </div>
+        <div class="dz-empty" id="dz-empty">
+          <div class="dz-icon">📷</div>
+          <p class="dz-title">Click to upload a label photo</p>
+          <p class="dz-sub">JPG or PNG — close-up, well-lit shots read best</p>
+        </div>
+      </div>
+      <input type="file" id="file-input" accept="image/*" hidden />
+
+      <div id="error-box" class="error-box" hidden></div>
+
+      <div class="btn-row">
+        <button class="btn btn-primary" id="scan-btn" disabled>Scan Label</button>
+        <button class="btn btn-ghost" id="reset-btn" hidden>Choose Another Photo</button>
+      </div>
+      <p class="processing-note" id="processing-note" hidden>Reading label &amp; checking Rule 6 compliance…</p>
+    </section>
+
+    <section class="result-panel" id="result-panel" hidden>
+      <div class="verdict-banner" id="verdict-banner">
+        <span class="verdict-mark" id="verdict-mark"></span>
+        <span class="verdict-copy" id="verdict-copy"></span>
+      </div>
+
+      <div class="fields-card">
+        <div class="fields-title">Rule 6 Declaration Check</div>
+        <ul class="field-list" id="field-list"></ul>
+      </div>
+
+      <details class="raw-text-details">
+        <summary>Show raw OCR text</summary>
+        <pre id="raw-text"></pre>
+      </details>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>LabelCheck AI — SIH26034 prototype</span>
+    <span>Screening tool only — not a substitute for official inspection.</span>
+  </footer>
+
+  <script src="/script.js"></script>
+</body>
+</html>
